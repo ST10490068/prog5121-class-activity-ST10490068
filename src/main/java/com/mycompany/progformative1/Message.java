@@ -12,17 +12,29 @@ public class Message {
     private String recipientCell;
     private String content;
     private String messageHash;
+    private String flag; 
 
     public Message(String id, String recipientCell, String content, String messageHash) {
         this.id = id;
         this.recipientCell = recipientCell;
         this.content = content;
         this.messageHash = messageHash;
+        this.flag = flag;
     }
 
     public String getId() { return id; }
     public String getRecipientCell() { return recipientCell; }
     public String getContent() { return content; }
     public String getMessageHash() { return messageHash; }
+    public String getFlag() { return flag; }
+    
+    
+    
+  @Override
+    public String toString() {
+       return "Hash: " + messageHash + "\nRecipient: " + recipientCell + "\nMessage: " + content;
+    }
 }
+
+
 
